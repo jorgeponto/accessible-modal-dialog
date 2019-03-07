@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="dialog.css">
 </head>
 <body>
+	<p id="demo"></p>
 
 	<header>
 		<div class="wrapper">
@@ -51,10 +52,18 @@
     <script src="Dialog.js"></script>
     <script>
     	var navDialogEl = document.querySelector('.dialog');
-		var dialogOverlay = document.querySelector('.dialog-overlay');
+	var dialogOverlay = document.querySelector('.dialog-overlay');
+	    
+	    /* Jorge's Tests 
+	    print an Array but first convert it to a string and print the string in <p> element inside of page's <body>
+	    */
+  		navDialogEl.toString();
+  		document.getElementById("demo").innerHTML = navDialogEl;
+}
+</script>
 		
-		var myDialog = new Dialog(navDialogEl, dialogOverlay);
-		myDialog.addEventListeners('.open-dialog', '.close-dialog');
+	var myDialog = new Dialog(navDialogEl, dialogOverlay);
+	myDialog.addEventListeners('.open-dialog', '.close-dialog');
     </script>
 </body>
 </html>
