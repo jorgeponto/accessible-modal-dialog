@@ -18,10 +18,11 @@
 			<button type="button" aria-label="Open Navigation" class="open-dialog"> <i class="fa fa-bars"></i> </button>
 		</div>
 	</header>
+	
+	<p class="demo"></p>
 
 	<div class="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
 		<h1 id="dialog-title">Site Navigation</h1>
-		<p id="demo"></p>
 		
 		<p id="dialog-description" class="sr-only">Description goes here</p>
 		<nav>
@@ -58,10 +59,9 @@
 	    /* Jorge's Tests 
 	    print an Array but first convert it to a string and print the string in <p> element inside of page's <body>
 	    */
-  		document.getElementById("demo").innerHTML = navDialogEl;
-}
-</script>
-		
+  		navDialogEl.toString();
+	    	document.getElementById("demo").innerHTML = navDialogEl;
+	
 	var myDialog = new Dialog(navDialogEl, dialogOverlay);
 	myDialog.addEventListeners('.open-dialog', '.close-dialog');
     </script>
