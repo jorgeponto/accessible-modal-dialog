@@ -19,8 +19,6 @@
 		</div>
 	</header>
 	
-	<p class="demo"></p>
-
 	<div class="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
 		<h1 id="dialog-title">Site Navigation</h1>
 		
@@ -55,12 +53,6 @@
     <script>
     	var navDialogEl = document.querySelector('.dialog');
 	var dialogOverlay = document.querySelector('.dialog-overlay');
-	    
-	    /* Jorge's Tests 
-	    print an Array but first convert it to a string and print the string in <p> element inside of page's <body>
-	    */
-  		navDialogEl.toString();
-	    	document.getElementById("demo").innerHTML = navDialogEl;
 	
 	var myDialog = new Dialog(navDialogEl, dialogOverlay);
 	myDialog.addEventListeners('.open-dialog', '.close-dialog');
